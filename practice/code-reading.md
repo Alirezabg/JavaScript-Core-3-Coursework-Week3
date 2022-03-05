@@ -15,6 +15,7 @@ Take a look at the following code:
 ```
 
 Explain why line 4 and line 6 output different numbers.
+Because line 6 variable is global but line 4 is local
 
 ## Question 2
 
@@ -34,6 +35,8 @@ console.log(y)
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+console.log(f1()) use console.log but function will not return anything so console.log outside function is undefine
+console.log(y), y is local variable inside f1 function and out side the function is undefine
 
 ## Question 3
 
@@ -62,3 +65,6 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+
+console.log(x) show 9 because f1 will not change x and return val but not inside anything
+console,log(y) will show 10 because inside the function will change object y with object.key x and add one to object value

@@ -6,3 +6,16 @@ let order = [
   { itemName: "Hot Coffee", quantity: 2, unitPrice: 1.0 },
   { itemName: "Hash Brown", quantity: 4, unitPrice: 0.4 },
 ];
+
+console.log(`QTY     ITEM                TOTAL\n`);
+let total = 0;
+order.map((ord) => {
+  let { itemName, quantity, unitPrice } = ord;
+  total += unitPrice * quantity;
+  console.log(
+    `${quantity}\t${itemName.padEnd(20, ` `)}${(unitPrice * quantity).toFixed(
+      2
+    )}\n`
+  );
+});
+console.log(`TOTAL: `, total);

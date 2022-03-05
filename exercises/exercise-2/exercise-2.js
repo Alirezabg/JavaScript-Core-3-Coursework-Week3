@@ -70,3 +70,21 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+//////////////////////Task One////////////////
+console.log(`\n ------------- Task 1 ------------\n`);
+hogwarts
+  .filter((occ) => (occ.house = "Gryffindor"))
+  .map((person) => {
+    let { firstName, lastName } = person;
+    console.log(firstName, ` `, lastName, ` resident of Gryffindor`);
+  });
+
+//////////////////////Task Two//////////////////
+console.log(`\n ------------- Task 2 ------------\n`);
+hogwarts
+  .filter((occ) => occ.occupation == "Teacher" && occ.pet !== null)
+  .map((person) => {
+    let { firstName, lastName } = person;
+    console.log(firstName, ` `, lastName, ` teacher who has pet`);
+  });
